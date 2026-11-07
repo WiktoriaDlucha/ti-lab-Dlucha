@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+}
+
+.naglowek-strony {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222222;
+}
+.logo {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+main > h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #AAAAAA;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 260px;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    background-color: #ffffff;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card--highlight {
+    border: 2px solid #4b78a8;
+    background-color: #edf4fb;
+}
+
+.card__price {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .naglowek-strony {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+}
+
+.num {
+    text-align: right;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.price-table th,
+.price-table td {
+    padding: 12px;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+}
+
+.price-table th {
+    background-color: #222222;
+    color: white;
+}
+
+.price-table .num {
+    text-align: right;
+    white-space: nowrap;
+}
+
+address {
+    font-style: normal;
+}
+
+footer {
+    background-color: #222222af;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #aaaaaa;
+}
+
+.card__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
