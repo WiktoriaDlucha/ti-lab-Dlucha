@@ -138,3 +138,34 @@ footer a:hover {
     border-radius: 8px;
     margin-bottom: 15px;
 }
+
+.menu-przycisk-mob {
+    display: none;
+    background-color: #222222;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    .menu-przycisk-mob {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .naglowek-strony {
+        flex-wrap: wrap;
+    }
+
+    .menu.otwarte {
+        display: flex;
+    }
+}
