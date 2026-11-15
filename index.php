@@ -141,6 +141,7 @@ $cennik = [
                 <td><?= htmlspecialchars($usluga['cena']) ?> zł </td>
            </tr>
 
+           <?php endforeach; ?>
             </tbody>
 
         </table>
