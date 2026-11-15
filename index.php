@@ -1,6 +1,33 @@
 <?php
 $firma = 'Szprycha';
 $rok = date('Y');
+
+$cennik = [
+    [
+        'nazwa' => 'Przegląd roweru',
+        'opis' => 'Kontrola hamulców i przerzutek.',
+        'cena' => 120
+    ],
+
+    [
+        'nazwa' => 'Serwis kompleksowy',
+        'opis' => 'Pełna kontrola i regulacja',
+        'cena' => 250
+    ],
+
+    [
+        'nazwa' => 'Naprawa kół',
+        'opis' => 'Centrowanie i kontrola obręczy',
+        'cena' => 80
+    ],
+
+    [
+        'nazwa' => ' Wymiana dętki',
+        'opis' => 'Wymiana uszkodzonej dętki',
+        'cena' => 40
+    ]
+];
+
 ?>
 
 <!DOCTYPE html>
@@ -106,30 +133,13 @@ $rok = date('Y');
 
         <tbody>
 
-            <tr>
-                <td>Przegląd roweru</td>
-                <td>Kontrola hamulców i przerzutek.</td>
-                <td class="num">120 zł</td>
-            </tr>
+           <?php foreach ($cennik as $usluga): ?>
 
-            <tr>
-                <td>Serwis kompleksowy</td>
-                <td>Pełna kontrola i regulacja.</td>
-                <td class="num">250 zł</td>
-            </tr>
-
-            <tr>
-                <td>Naprawa kół</td>
-                <td>Centrowanie i kontrola obręczy.</td>
-                <td class="num">80 zł</td>
-            </tr>
-
-            <tr>
-                <td>Wymiana dętki</td>
-                <td>Wymiana uszkodzonej dętki.</td>
-                <td class="num">40 zł</td>
-            </tr>
-
+            <tr> 
+                <td><?= htmlspecialchars($usluga['nazwa'])?> </td>
+                <td> <?= htmlspecialchars($usluga['opis']) ?> </td>
+                <td><?= htmlspecialchars($usluga['cena']) ?> zł </td>
+           </tr>
 
             </tbody>
 
